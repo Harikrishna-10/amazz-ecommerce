@@ -30,7 +30,7 @@ function SuccessPage() {
                 strokeLinecap="round"
                 strokeLinejoin="round"
                 strokeWidth={2}
-                d="M5 1314 4L19 7"
+                d="M5 13l4 4L19 7"
               />
             </svg>
           </div>
@@ -54,20 +54,21 @@ function SuccessPage() {
           </div>
         </div>
         <div className="space-y-4 text-center">
-            <p className="text-grey-600">
-                A confirmation email has been sent to your registered email address.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button asChild className="bg-green-600 hover:bg-grren-700">
-                    <Link href="/orders">View order Details</Link>
-                </Button>
-                <Button asChild variant="outline">
-                    <Link href="/">Continue Shopping</Link>
-                </Button>
-            </div>
+          <p className="text-gray-600">
+            A confirmation email has been sent to your registered email address.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Button asChild className="bg-green-600 hover:bg-green-700">
+              <Link href="/orders">View Order Details</Link>
+            </Button>
+            <Button asChild variant="outline">
+              <Link href="/">Continue Shopping</Link>
+            </Button>
+          </div>
         </div>
       </div>
     </div>
   );
 }
+
 export default SuccessPage;

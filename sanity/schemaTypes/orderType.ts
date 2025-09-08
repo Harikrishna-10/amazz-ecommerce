@@ -14,7 +14,7 @@ export const orderType = defineType({
       validation: (Rule) => Rule.required(),
     }),
     defineField({
-      name: "stringCheckoutSessionId",
+      name: "stripeCheckoutSessionId",
       title: "Stripe Checkout Session ID",
       type: "string",
     }),
@@ -43,7 +43,7 @@ export const orderType = defineType({
       validation: (Rule) => Rule.required().email(),
     }),
     defineField({
-      name: "stripPaymentIntentId",
+      name: "stripePaymentIntentId",
       title: "Stripe Payment Intent ID",
       type: "string",
       validation: (Rule) => Rule.required(),
@@ -74,11 +74,11 @@ export const orderType = defineType({
               quantity: "quantity",
               image: "product.image",
               price: "product.price",
-              currencey: "product.currency",
+              currency: "product.currency",
             },
             prepare(select) {
               return {
-                title: `$(select.product) x ${select.quantity}`,
+                title: `${select.product} x ${select.quantity}`,
                 subtitle: `${select.price * select.quantity}`,
                 media: select.image,
               };
@@ -112,7 +112,7 @@ export const orderType = defineType({
       options: {
         list: [
           { title: "Pending", value: "pending" },
-          { title: "Paid", value: "Paid" },
+          { title: "Paid", value: "paid" },
           { title: "Shipped", value: "shipped" },
           { title: "Delivered", value: "delivered" },
           { title: "Cancelled", value: "cancelled" },

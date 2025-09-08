@@ -434,7 +434,7 @@
         },
         "optional": true
       },
-      "stringCheckoutSessionId": {
+      "stripeCheckoutSessionId": {
         "type": "objectAttribute",
         "value": {
           "type": "string"
@@ -469,7 +469,7 @@
         },
         "optional": true
       },
-      "stripPaymentIntentId": {
+      "stripePaymentIntentId": {
         "type": "objectAttribute",
         "value": {
           "type": "string"
@@ -568,7 +568,7 @@
             },
             {
               "type": "string",
-              "value": "Paid"
+              "value": "paid"
             },
             {
               "type": "string",
